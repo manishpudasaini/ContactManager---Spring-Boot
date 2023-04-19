@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+  <meta charset="UTF-8">
+  <title>About page</title>
+</head>
+<body>
+
+<section>
+
+  <h1 style="text-align: center; margin-top: 40px;">Login Form</h1>
+  <form style="border: 3px solid #f1f1f1; max-width: 500px; margin: 0 auto; padding: 20px; background-color: white;">
+
+      <label for="email">Email :</label>
+      <input type="text" id="email" placeholder="email address" name="email" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;">
+      <br>
+
+      <label for="password">Password:</label>
+      <input type="text" id="password" placeholder="password" name="password" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;">
+      <br>
+
+      <button type="submit" style="background-color: #4CAF50; color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: fit-content;">Login</button>
+  </form>
+
+</section>
+</body>
+</html>

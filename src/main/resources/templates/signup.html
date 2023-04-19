@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="base::layout(~{::section})">
 <head>
     <meta charset="UTF-8">
-    <title>Signup page</title>
+    <title>About page</title>
 </head>
 <body>
 
+<section>
+    <h1 style="text-align: center;">Register Here</h1>
+    <form th:action="@{/register}" th:method="post" th:object="${user}" style="max-width: 600px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 5px;">
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" th:value="${user.name}" placeholder="username" name="name" required style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px;"><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" th:value="${user.email}" placeholder="email address" name="email" required style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px;"><br>
+
+        <label for="password">Password:</label>
+        <input type="text" id="password" th:value="${user.password}" placeholder="password" name="password" required style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px;"><br>
+
+        <label for="role">Role:</label>
+        <input type="text" id="role" th:value="${user.role}" placeholder="role" name="role" required style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px;"><br>
+
+        <label for="password">Text Area:</label>
+        <textarea  th:value="${user.about}" placeholder="Enter something here" name="about" style="width: 100%; height:130px; padding: 8px; margin-bottom: 10px; "></textarea><br>
+        <input type="submit" value="Signup" style="width: fit-content; margin-left: 200px; padding: 10px; background-color: #007bff; color: #fff; border: none; cursor: pointer; border-radius: 3px;">
+
+    </form>
+</section>
 </body>
 </html>
